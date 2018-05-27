@@ -22,6 +22,7 @@ public class InstantiateController : MonoBehaviour {
 	public Material bd;
 	public Text textBest;
 	public int points;
+	public float spe = 0.0f;
 	public List<GameObject> j;
 	public GameObject s; 
 	public GameObject scoreControler;
@@ -134,7 +135,7 @@ public class InstantiateController : MonoBehaviour {
 			if (m == 2f) m = 0;
 
 			if (score >= 10) {
-				j[j.Count-1].GetComponent<Cube> ().speed +=0.1f;
+				j[j.Count-1].GetComponent<Cube> ().speed += spe;
 			}
 
 			best = scoreControler.GetComponent<scoreControler> ().getBest ();
@@ -143,6 +144,7 @@ public class InstantiateController : MonoBehaviour {
 				scoreControler.GetComponent<scoreControler> ().setBest (score);
 				textBest.text = "Best Score: " + (best+1).ToString();
 			}
+			spe += 0.1f;
 
 		}
 
