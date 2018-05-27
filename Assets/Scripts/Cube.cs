@@ -6,7 +6,7 @@ public class Cube : MonoBehaviour {
 	public bool MoveX = true;
 	float distance = 10.0f;
 	public float direction = 1.0f;
-	public float speed = 4.0f;
+	public float speed = 8.0f;
 
 	// Use this for initialization
 	void Start () {
