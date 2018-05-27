@@ -11,7 +11,7 @@ public class ColorManager : MonoBehaviour {
 	float d;
 	// Use this for initialization
 	void Start () {
-		int index = Random.Range(0, colors.Length);
+		index = Random.Range(0, colors.Length);
 	}
 	
 	// Update is called once per frame

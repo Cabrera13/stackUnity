@@ -48,6 +48,7 @@ public class InstantiateController : MonoBehaviour {
 		textBest.text = "Best Score: " + best.ToString();
 		textFinal.gameObject.SetActive(false);
 
+
 	}
 	
 	// Update is called once per frame
@@ -132,13 +133,15 @@ public class InstantiateController : MonoBehaviour {
 			m+=1;
 			if (m == 2f) m = 0;
 
-			
+			if (score >= 10) {
+				j[j.Count-1].GetComponent<Cube> ().speed +=0.1f;
+			}
 
 			best = scoreControler.GetComponent<scoreControler> ().getBest ();
 
 			if (score >= best) {
 				scoreControler.GetComponent<scoreControler> ().setBest (score);
-				textBest.text = "Best Score: " + best.ToString();
+				textBest.text = "Best Score: " + (best+1).ToString();
 			}
 
 		}
